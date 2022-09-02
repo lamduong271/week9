@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import MyList from "./MyList";
 export default function MyContainer() {
   const [text, setText] = useState("");
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([
+    {
+      id: "1",
+      text: "item 1",
+    },
+  ]);
   const onSubmit = () => {
     if (text !== "") {
       setItems([

@@ -30,6 +30,7 @@ export default function MyList(props) {
           {items.map((item) => (
             <div key={item.id} className="list-item">
               <li
+                onClick={() => updateItemHandler(item.id)}
                 style={{
                   textDecoration: `${
                     findEditedItem(item.id) ? "line-through" : ""
